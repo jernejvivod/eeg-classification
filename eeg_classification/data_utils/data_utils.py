@@ -78,7 +78,5 @@ def get_intervals(raw_data, interval_len_s=2.0, overlap=0.5):
         start_idx += move_add
         
     # Return intervals and their labels.
-    return np.stack(intervals), target
-
-# intervals, target = get_intervals(parse_raw_data("../demo_data/S001R03.edf"))
+    return np.stack(intervals), target, raw_data["samp_freq"]
 
